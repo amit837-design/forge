@@ -5,12 +5,9 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 
 app.use(cors());
-app.use(express.json()); // MUST be before routes
+app.use(express.json()); 
 
-app.get("/", (req, res) => {
-  res.send("App is running");
-});
-
+// Routes
 app.use("/api/media", imageRoutes);
 app.use("/api/auth", authRoutes);
 
