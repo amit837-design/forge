@@ -6,6 +6,10 @@ const app = express();
 
 app.use(cors());
 
+app.use("/", (req, res) => {
+  res.send("App is running");
+});
+
 app.use("/api/media", imageRoutes);
 app.use(express.json());
 app.use("/api/auth", authRoutes);
