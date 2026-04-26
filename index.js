@@ -1,11 +1,6 @@
 require("dotenv").config();
 const app = require("./src/app");
 const connectDB = require("./src/db/db.js");
-
-app.use("/", (req, res) => {
-  res.send("App is running");
-}
-
 const PORT = process.env.PORT || 5000;
 
 connectDB();
